@@ -58,5 +58,5 @@ func StatusIconNewFromFile(file string) (*StatusIcon, error) {
 
 // Wrapper around gtk_status_icon_set_visible
 func (v *StatusIcon) SetVisible(visible bool) {
-	C.gtk_status_icon_set_visible(gbool(visible))
+	C.gtk_status_icon_set_visible(v.GObject, gbool(visible))
 }
