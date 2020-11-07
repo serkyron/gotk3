@@ -208,6 +208,12 @@ toGtkLabel(void *p)
 	return (GTK_LABEL(p));
 }
 
+static GtkStatusIcon *
+toGtkStatusIcon(void *p)
+{
+	return (GTK_STATUS_ICON(p));
+}
+
 static GtkNotebook *
 toGtkNotebook(void *p)
 {
