@@ -7,9 +7,8 @@ package gtk
 // #include "gtk.go.h"
 import "C"
 import (
-	"unsafe"
-
 	"github.com/gotk3/gotk3/glib"
+	"unsafe"
 )
 
 /*
@@ -58,5 +57,5 @@ func StatusIconNewFromFile(file string) (*StatusIcon, error) {
 
 // Wrapper around gtk_status_icon_set_visible
 func (v *StatusIcon) SetVisible(visible bool) {
-	C.gtk_status_icon_set_visible(v.GObject, gbool(visible))
+	C.gtk_status_icon_set_visible(v.native(), gbool(visible))
 }
